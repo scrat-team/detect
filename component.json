@@ -1,0 +1,12 @@
+{
+  "name": "detect",
+  "repo": "elf/detect",
+  "description": "Detect client's os version and browser from ua",
+  "version": "0.1.0",
+  "keywords": ["ua", "os", "browser"],
+  "scripts": ["index.js"],
+  "remotes": [
+    "http://git.ucweb.local"
+  ],
+  "license": "MIT"
+}
