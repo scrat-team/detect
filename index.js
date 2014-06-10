@@ -1,4 +1,3 @@
-/*jshint curly: false, forin: false, noempty: false */
 'use strict';
 
 var ua = navigator.userAgent,
