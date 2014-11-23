@@ -9,7 +9,8 @@ var ua = navigator.userAgent,
     iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
     kindle = ua.match(/Kindle\/([\d.]+)/),
     silk = ua.match(/Silk\/([\d._]+)/),
-    uc = ua.match(/UC/);
+    uc = ua.match(/UC/),
+    wechat = uc.match(/MicroMessenger/);
 
 browser.webkit = !!webkit;
 if (browser.webkit) { browser.version = webkit[1]; }
@@ -20,6 +21,7 @@ if (kindle) { os.kindle = true; os.version = kindle[1]; }
 if (silk) { browser.silk = true; browser.version = silk[1]; }
 if (!silk && os.android && ua.match(/Kindle Fire/)) { browser.silk = true; }
 if (uc) { browser.uc = true; }
+if (wechat) { browser.wechat = true; }
 if (!android && !ipad && !iphone && !kindle && !silk && !uc) {
     browser.desktop = true;
 }
