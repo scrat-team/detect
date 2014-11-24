@@ -10,7 +10,7 @@ var ua = navigator.userAgent,
     kindle = ua.match(/Kindle\/([\d.]+)/),
     silk = ua.match(/Silk\/([\d._]+)/),
     uc = ua.match(/UC/),
-    wechat = uc.match(/MicroMessenger/);
+    wechat = ua.match(/MicroMessenger/);
 
 browser.webkit = !!webkit;
 if (browser.webkit) { browser.version = webkit[1]; }
