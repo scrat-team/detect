@@ -20,7 +20,13 @@ if (ipad) { os.ios = os.ipad = true; os.version = ipad[2].replace(/_/g, '.'); }
 if (kindle) { os.kindle = true; os.version = kindle[1]; }
 if (silk) { browser.silk = true; browser.version = silk[1]; }
 if (!silk && os.android && ua.match(/Kindle Fire/)) { browser.silk = true; }
-if (uc) { browser.uc = true; }
+if (uc) {
+  browser.uc = true;
+  var ucstr = ua.substring(ua.indexOf('UC'), ua.length);
+  var uclen = ucstr.indexOf(' ');
+  uclen = uclen > -1 ? uclen : ucstr.length;
+  browser.ver = ucstr.substring(ucstr.indexOf('/') + 1, uclen);
+}
 if (wechat) { browser.wechat = true; }
 if (!android && !ipad && !iphone && !kindle && !silk && !uc) {
     browser.desktop = true;
