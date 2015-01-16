@@ -25,7 +25,7 @@ if (uc) {
   var ucstr = ua.substring(ua.indexOf('UC'), ua.length);
   var uclen = ucstr.indexOf(' ');
   uclen = uclen > -1 ? uclen : ucstr.length;
-  browser.ver = ucstr.substring(ucstr.indexOf('/') + 1, uclen);
+  browser.version = ucstr.substring(ucstr.indexOf('/') + 1, uclen);
 }
 if (wechat) { browser.wechat = true; }
 if (!android && !ipad && !iphone && !kindle && !silk && !uc) {
