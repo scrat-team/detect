@@ -2,7 +2,7 @@
   "name": "detect",
   "repo": "scrat-team/detect",
   "description": "Detect client's os version and browser from ua",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "keywords": ["ua", "os", "browser"],
   "scripts": ["index.js"],
   "license": "MIT"

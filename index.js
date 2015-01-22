@@ -9,7 +9,7 @@ var ua = navigator.userAgent,
     iphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
     kindle = ua.match(/Kindle\/([\d.]+)/),
     silk = ua.match(/Silk\/([\d._]+)/),
-    uc = ua.match(/UC/),
+    uc = ua.match(/UC/) || window.ucweb || window.ucbrowser,
     wechat = ua.match(/MicroMessenger/);
 
 browser.webkit = !!webkit;
