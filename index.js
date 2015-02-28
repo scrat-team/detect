@@ -28,7 +28,7 @@ if (uc) {
   browser.version = ucstr.substring(ucstr.indexOf('/') + 1, uclen);
 }
 if (wechat) { browser.wechat = true; }
-if (!android && !ipad && !iphone && !kindle && !silk && !uc) {
+if (!android && !ipad && !iphone && !kindle && !silk && !wechat && !uc) {
     browser.desktop = true;
 }
 
